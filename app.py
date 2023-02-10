@@ -1,7 +1,7 @@
 from math import *
 
 # DO YOU WANNA EDIT OR JUST VIEW EXAMPLES BELOW?
-editing = False
+editing = True
 
 # 1 Print pattern
 def part1():
@@ -175,10 +175,49 @@ def part14():
     print(cstring("Halo", "Halo"))
     print()
 
+# 15 Better Calculator
+def part15():
+    bcnum1 = float(input("Enter first number: "))
+    op = input("Enter operator: ")
+    bcnum2 = float(input("Enter second number: "))
+
+    if op == "+":
+        print(bcnum1 + bcnum2)
+    elif op == "-":
+        print(bcnum1 - bcnum2)
+    elif op == "*":
+        print(bcnum1 * bcnum2)
+    elif op == "/":
+        print(bcnum1 / bcnum2)
+    else:
+        print("Invalid operator.")
+
+    print()
+
+# 16 Dictionaries
+def part16():
+    monthConversions = {
+        "Jan": "January",
+        "Feb": "February",
+        "Mar": "March",
+        "Apr": "April",
+        "May": "May",
+        "Jun": "June",
+        "Jul": "July",
+        "Aug": "August",
+        "Sep": "September",
+        "Oct": "October",
+        "Nov": "November",
+        "Dec": "December"
+    }
+    print(monthConversions)
+    print(monthConversions["Jul"])
+    print(monthConversions.get("Frd", "Not a valid key."))
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part14()
+    part16()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -197,6 +236,10 @@ else:
     print("12. Return statements")
     print("13. If statements")
     print("14. If comparisons")
+    print("15. Better calculator")
+    print("16. Dictionary")
+
+
     selectnum = input("Select part number from list: ")
     if selectnum == "1":
         part1()
@@ -226,5 +269,9 @@ else:
         part13()
     elif selectnum == "14":
         part14()
+    elif selectnum == "15":
+        part15()
+    elif selectnum == "16":
+        part16()
     else:
         print("ERROR INVALID INPUT.")
