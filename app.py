@@ -1,7 +1,7 @@
 from math import *
 
 # DO YOU WANNA EDIT OR JUST VIEW EXAMPLES BELOW?
-editing = True
+editing = False
 
 # 1 Print pattern
 def part1():
@@ -214,64 +214,100 @@ def part16():
     print(monthConversions["Jul"])
     print(monthConversions.get("Frd", "Not a valid key."))
 
+# 17 While loop
+def part17():
+    i = 1
+    while i <= 10:
+        print(i)
+        i += 1
+    print("Done with loop...")
+
+# 18 Guessing game
+def part18():
+    secret_word = "giraffe"
+    guess = ""
+    guess_count = 0
+    guess_limit = 3
+    out_of_guesses = False
+
+    while guess != secret_word and not(out_of_guesses):
+        if guess_count < guess_limit:
+            guess = input("Enter a guess: ")
+            guess_count += 1
+        else:
+            out_of_guesses = True
+
+    if out_of_guesses:
+        print("Out of guesses, YOU LOSE!")
+    else:
+        print("You win!")
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part16()
+    part18()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
-    print("WELCOME!")
-    print("1. Print")
-    print("2. Story with variables")
-    print("3. String basics")
-    print("4. Number basics")
-    print("5. Inputs")
-    print("6. Calculator")
-    print("7. Mad Libs Game")
-    print("8. List Basics")
-    print("9. List Functions")
-    print("10. Tuples on list")
-    print("11. Functions")
-    print("12. Return statements")
-    print("13. If statements")
-    print("14. If comparisons")
-    print("15. Better calculator")
-    print("16. Dictionary")
+    selectnum = ""
+    while selectnum != "exit":
+        print("WELCOME!")
+        print("1. Print")
+        print("2. Story with variables")
+        print("3. String basics")
+        print("4. Number basics")
+        print("5. Inputs")
+        print("6. Calculator")
+        print("7. Mad Libs Game")
+        print("8. List Basics")
+        print("9. List Functions")
+        print("10. Tuples on list")
+        print("11. Functions")
+        print("12. Return statements")
+        print("13. If statements")
+        print("14. If comparisons")
+        print("15. Better calculator")
+        print("16. Dictionary")
+        print("17. While loop")
+        print("18. Guessing game")
+        print("Write exit to end program.")
 
-
-    selectnum = input("Select part number from list: ")
-    if selectnum == "1":
-        part1()
-    elif selectnum == "2":
-        part2()
-    elif selectnum == "3":
-        part3()
-    elif selectnum == "4":
-        part4()
-    elif selectnum == "5":
-        part5()
-    elif selectnum == "6":
-        part6()
-    elif selectnum == "7":
-        part7()
-    elif selectnum == "8":
-        part8()
-    elif selectnum == "9":
-        part9()
-    elif selectnum == "10":
-        part10()
-    elif selectnum == "11":
-        part11()
-    elif selectnum == "12":
-        part12()
-    elif selectnum == "13":
-        part13()
-    elif selectnum == "14":
-        part14()
-    elif selectnum == "15":
-        part15()
-    elif selectnum == "16":
-        part16()
-    else:
-        print("ERROR INVALID INPUT.")
+        selectnum = input("Select part number from list: ")
+        if selectnum == "1":
+            part1()
+        elif selectnum == "2":
+            part2()
+        elif selectnum == "3":
+            part3()
+        elif selectnum == "4":
+            part4()
+        elif selectnum == "5":
+            part5()
+        elif selectnum == "6":
+            part6()
+        elif selectnum == "7":
+            part7()
+        elif selectnum == "8":
+            part8()
+        elif selectnum == "9":
+            part9()
+        elif selectnum == "10":
+            part10()
+        elif selectnum == "11":
+            part11()
+        elif selectnum == "12":
+            part12()
+        elif selectnum == "13":
+            part13()
+        elif selectnum == "14":
+            part14()
+        elif selectnum == "15":
+            part15()
+        elif selectnum == "16":
+            part16()
+        elif selectnum == "17":
+            part17()
+        elif selectnum == "18":
+            part18()
+        else:
+            print("ERROR INVALID INPUT.")
