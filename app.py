@@ -242,10 +242,24 @@ def part18():
     else:
         print("You win!")
 
+# 19 For loops
+def part19():
+    ffriends = ["Ella", "Matti", "Pekka"]
+
+    for letter in "Giraffe":
+        print(letter)
+    for ffriend in ffriends:
+        print(ffriend)
+    for index in range(5):
+        if index == 0:
+            print("First iteration.")
+        else:
+            print("Not first.")
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part18()
+    part19()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -270,6 +284,8 @@ else:
         print("16. Dictionary")
         print("17. While loop")
         print("18. Guessing game")
+        print("19. For loops")
+        print()
         print("Write exit to end program.")
 
         selectnum = input("Select part number from list: ")
@@ -309,5 +325,7 @@ else:
             part17()
         elif selectnum == "18":
             part18()
+        elif selectnum == "19":
+            part19()
         else:
             print("ERROR INVALID INPUT.")
