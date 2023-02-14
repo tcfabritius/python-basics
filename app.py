@@ -256,10 +256,20 @@ def part19():
         else:
             print("Not first.")
 
+# 20 Exponent function
+def part20():
+    print(2**3)
+    def raise_to_power(base_num, pow_num):
+        eresult = 1
+        for index in range(pow_num):
+            eresult = eresult * base_num
+        return eresult
+    print(raise_to_power(3, 4))
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part19()
+    part20()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -285,6 +295,7 @@ else:
         print("17. While loop")
         print("18. Guessing game")
         print("19. For loops")
+        print("20. Exponent function")
         print()
         print("Write exit to end program.")
 
@@ -327,5 +338,7 @@ else:
             part18()
         elif selectnum == "19":
             part19()
+        elif selectnum == "20":
+            part20()
         else:
             print("ERROR INVALID INPUT.")
