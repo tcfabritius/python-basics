@@ -295,10 +295,21 @@ def part22():
         return translation
     print(translate(input("Enter a phrase: ")))
 
+# 23 Try except
+def part23():
+    try:
+        val = 10/0
+        nmb = int(input("Enter a number: "))
+        print(nmb)
+    except ZeroDivisionError as err:
+        print(err)
+    except ValueError:
+        print("Invalid Input")
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part22()
+    part23()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -327,6 +338,7 @@ else:
         print("20. Exponent function")
         print("21. 2D lists and nested loops")
         print("22. Translator")
+        print("23. Try except")
         print()
         print("Write exit to end program.")
 
@@ -375,5 +387,7 @@ else:
             part21()
         elif selectnum == "22":
             part22()
+        elif selectnum == "23":
+            part23()
         else:
             print("ERROR INVALID INPUT.")
