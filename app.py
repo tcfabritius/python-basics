@@ -266,10 +266,39 @@ def part20():
         return eresult
     print(raise_to_power(3, 4))
 
+# 21 2d lists and nested loops
+def part21():
+    number_grid = [
+        [ 1, 2, 3 ],
+        [ 4, 5, 6 ],
+        [ 7, 8, 9 ],
+        [ 0 ]
+    ]
+
+    print(number_grid[0][0])
+    for row in number_grid:
+        for col in number_grid:
+            print(col)
+
+# 22 Translator
+def part22():
+    def translate(phrase):
+        translation = ""
+        for letter in phrase:
+            if letter.lower() in "aeiou":
+                if letter.isupper():
+                    translation = translation + "G"
+                else:
+                    translation = translation + "g"
+            else:
+                translation = translation + letter
+        return translation
+    print(translate(input("Enter a phrase: ")))
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part20()
+    part22()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -296,6 +325,8 @@ else:
         print("18. Guessing game")
         print("19. For loops")
         print("20. Exponent function")
+        print("21. 2D lists and nested loops")
+        print("22. Translator")
         print()
         print("Write exit to end program.")
 
@@ -340,5 +371,9 @@ else:
             part19()
         elif selectnum == "20":
             part20()
+        elif selectnum == "21":
+            part21()
+        elif selectnum == "22":
+            part22()
         else:
             print("ERROR INVALID INPUT.")
