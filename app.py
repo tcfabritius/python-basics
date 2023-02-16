@@ -321,10 +321,20 @@ def part24():
 
     employee_file.close()
 
+# 25 Write files
+def part25():
+    employee_file = open("employes.txt", "a")
+    employee_file.write("Toby - HR")
+    employee_file.write("\nKelly - Customer Service")
+    employee_file.close()
+    employee_file = open("employees.txt", "w")
+    employee_file.write("Toby - HR")
+    employee_file.close()
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part24()
+    part25()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -355,6 +365,7 @@ else:
         print("22. Translator")
         print("23. Try except")
         print("24. Read files")
+        print("25. Write files")
         print()
         print("Write exit to end program.")
 
@@ -407,5 +418,7 @@ else:
             part23()
         elif selectnum == "24":
             part24()
+        elif selectnum == "25":
+            part25()
         else:
             print("ERROR INVALID INPUT.")
