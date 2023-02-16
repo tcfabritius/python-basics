@@ -306,10 +306,25 @@ def part23():
     except ValueError:
         print("Invalid Input")
 
+# 24 Read files
+def part24():
+    employee_file = open("employes.txt", "r")
+
+    print(employee_file.readable())
+    print(employee_file.read())
+    print(employee_file.readline())
+    print(employee_file.readline())
+    print(employee_file.readlines())
+    print(employee_file.readlines()[1])
+    for employee in employee_file.readlines():
+        print(employee)
+
+    employee_file.close()
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part23()
+    part24()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -339,6 +354,7 @@ else:
         print("21. 2D lists and nested loops")
         print("22. Translator")
         print("23. Try except")
+        print("24. Read files")
         print()
         print("Write exit to end program.")
 
@@ -389,5 +405,7 @@ else:
             part22()
         elif selectnum == "23":
             part23()
+        elif selectnum == "24":
+            part24()
         else:
             print("ERROR INVALID INPUT.")
