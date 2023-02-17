@@ -1,9 +1,13 @@
 from math import *
+from Student import Student
+from Question import Question
+from Chef import Chef
+from ChineseChef import ChineseChef
 import useful_tools
 import docx
 
 # DO YOU WANNA EDIT OR JUST VIEW EXAMPLES BELOW?
-editing = True
+editing = False
 
 # 1 Print pattern
 def part1():
@@ -340,28 +344,53 @@ def part26():
 
 # 27 Classes and objects
 def part27():
+    student1 = Student("Tim", "ICT", 3.1)
+    student2 = Student("Ben", "Business", 2.3)
 
+    print(student1.name)
 
 # 28 Multi choise quiz
 def part28():
+    question_prompts = [
+        "What color are apples?\n(a) Red/Green\n(b) Purple\n(c) Orange\n\n",
+        "What color are bananas?\n(a) Teal\n(b) Magenta\n(c) Yellow\n\n",
+        "What color are strawberries?\n(a) Yellow\n(b) Red\n(c) Blue\n\n"
+    ]
 
+    questions = [
+        Question(question_prompts[0], "a"),
+        Question(question_prompts[1], "c"),
+        Question(question_prompts[2], "b")
+    ]
+
+    def run_test(questions):
+        score = 0
+        for question in questions:
+            answer = input(question.prompt)
+            if answer == question.answer:
+                score += 1
+        print("You got " + str(score) + "/" + str(len(questions)) + " correct")
+
+    run_test(questions)
 
 # 29 Object functions
 def part29():
-
+    student1 = Student("Tim", "ICT", 3.1)
+    student2 = Student("Ben", "Business", 2.3)
+    print(student1.on_honor_roll())
 
 # 30 Inheritance
 def part30():
+    myChef = Chef()
+    myChef.make_special_dish()
 
-
-# 31 Interpreter
-def part31():
-
+    myChineseChef = ChineseChef()
+    myChineseChef.make_special_dish()
 
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part26()
+    part30()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -398,7 +427,6 @@ else:
         print("28. Multi choise quiz")
         print("29. Object functions")
         print("30. Inheritance")
-        print("31. Interpreter")
         print()
         print("Write exit to end program.")
 
@@ -463,7 +491,5 @@ else:
             part29()
         elif selectnum == "30":
             part30()
-        elif selectnum == "31":
-            part31()
         else:
             print("ERROR INVALID INPUT.")
