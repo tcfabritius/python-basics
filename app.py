@@ -1,7 +1,9 @@
 from math import *
+import useful_tools
+import docx
 
 # DO YOU WANNA EDIT OR JUST VIEW EXAMPLES BELOW?
-editing = False
+editing = True
 
 # 1 Print pattern
 def part1():
@@ -331,10 +333,35 @@ def part25():
     employee_file.write("Toby - HR")
     employee_file.close()
 
+# 26 Modules and pip
+def part26():
+    print(useful_tools.roll_dice(10))
+    print(docx)
+
+# 27 Classes and objects
+def part27():
+
+
+# 28 Multi choise quiz
+def part28():
+
+
+# 29 Object functions
+def part29():
+
+
+# 30 Inheritance
+def part30():
+
+
+# 31 Interpreter
+def part31():
+
+
 # APP START HERE
 if editing:
     # TESTING IN EDITING MODE. PUT PART NUMBER BELOW.
-    part25()
+    part26()
 
 else:
     # ONLY RUNNING MODE WITH INPUTS.
@@ -366,6 +393,12 @@ else:
         print("23. Try except")
         print("24. Read files")
         print("25. Write files")
+        print("26. Modules and pip")
+        print("27. Classes and objects")
+        print("28. Multi choise quiz")
+        print("29. Object functions")
+        print("30. Inheritance")
+        print("31. Interpreter")
         print()
         print("Write exit to end program.")
 
@@ -420,5 +453,17 @@ else:
             part24()
         elif selectnum == "25":
             part25()
+        elif selectnum == "26":
+            part26()
+        elif selectnum == "27":
+            part27()
+        elif selectnum == "28":
+            part28()
+        elif selectnum == "29":
+            part29()
+        elif selectnum == "30":
+            part30()
+        elif selectnum == "31":
+            part31()
         else:
             print("ERROR INVALID INPUT.")
